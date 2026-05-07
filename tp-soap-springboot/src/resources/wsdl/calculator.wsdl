@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://example.com/calculator"
+           targetNamespace="http://example.com/calculator"
+           elementFormDefault="qualified">
+
+    <!-- Requête -->
+    <xs:element name="CalculatorRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="a" type="xs:double"/>
+                <xs:element name="b" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Réponse -->
+    <xs:element name="CalculatorResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:double"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Exception -->
+    <xs:element name="ServiceFault">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
